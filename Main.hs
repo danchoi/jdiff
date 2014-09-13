@@ -32,11 +32,15 @@ diffKeys x y = do
           (\a -> do
             let eq = M.lookup a x == M.lookup a y
             when (not eq) $ do
+              putStrLn $ "Values not equal for " ++ show a
+              diff (fromJust $ M.lookup a x) (fromJust $ M.lookup a y)
+              {-
               forM_ [("left", M.lookup a x), ("right", M.lookup a y)] 
                     (\(label, o) -> do
                       putStrLn label
                       B.putStrLn . encode $ o
                     )
+                    -}
           )
 
 
