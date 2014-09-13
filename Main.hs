@@ -31,7 +31,6 @@ diffKeys x y = do
     forM_ (S.toList c) 
           (\a -> do
             let eq = M.lookup a x == M.lookup a y
-            putStrLn $ show a ++ " => " ++ show eq
             when (not eq) $ do
               forM_ [("left", M.lookup a x), ("right", M.lookup a y)] 
                     (\(label, o) -> do
