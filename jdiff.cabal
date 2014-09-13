@@ -24,6 +24,7 @@ executable jdiff
                        bytestring,
                        vector,
                        unordered-containers,
+                       containers,
                        pretty-show
 
   -- hs-source-dirs:      
