@@ -1,0 +1,17 @@
+.cabal-sandbox/bin/jdiff ipad-notes-9912.json ipad0-notes-9912.json  >> README
+
+False
+Missing from right
+fromList ["action","text_body"]
+Missing from left
+fromList ["distribution_emails","email_id","note_type_icon","published_team_at","submitter_id","user_id"]
+Checking common values for equality...
+Values not equal for "created_at"
+String "2014-08-18T22:06:56Z" == String "2014-08-18T18:06:56-04:00" => False
+Values not equal for "user"
+Missing from right
+fromList ["username"]
+Missing from left
+fromList []
+Checking common values for equality...
+ 
